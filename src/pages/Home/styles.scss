@@ -1,0 +1,26 @@
+.home-title{
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 64px;
+  margin-top: 117px;
+  max-width: 580px;
+}
+
+.home-description{
+  max-width: 612px;
+  margin-top: 25px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #5A6774;
+  padding-bottom: 48px;
+
+  a{
+    color: #1890FF;
+    text-decoration: none;
+  }
+
+  p{
+    margin-bottom: 10px;
+  }
+}
