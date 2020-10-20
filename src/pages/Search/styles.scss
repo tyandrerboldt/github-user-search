@@ -1,0 +1,27 @@
+.search-title{
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 46px;
+  color: #262626;
+}
+
+.search-input{
+  margin-top: 12px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 678px;
+  font-size: 16px;
+  border: solid 1px #cccccc;
+  border-radius: 4px;
+  padding: 8px 17px;
+  display: block;
+  outline: none;
+
+  &::placeholder{
+    color: #BFBFBF;
+  }
+}
+
+.searched-profiles{
+  width: 100%;
+}

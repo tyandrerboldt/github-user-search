@@ -6,8 +6,8 @@ import Header from './core/components/Header';
 
 const Routes = () => (
   <>
-    <Header title="Bootcamp DevSuperior" />
     <BrowserRouter>
+      <Header title="Bootcamp DevSuperior" />
       <Switch>
         <Route path="/" exact>
           <Home />

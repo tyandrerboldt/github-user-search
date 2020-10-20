@@ -2,9 +2,12 @@
   background-color: #1890FF;
   padding-left: 41px;
   height: 62px;
-  width: 100vw;
   display: flex;
   align-items: center;
+
+  a{
+    text-decoration: none;
+  }
 }
 
 .main-header-title{
