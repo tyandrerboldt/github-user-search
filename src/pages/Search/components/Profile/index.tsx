@@ -1,31 +1,38 @@
 import React from 'react'
 import './styles.scss'
+import { Profile as ProfileType } from '../../../../core/types';
+import formatDate from '../../../../core/utils/formatDate';
 
-const Profile = () => {
+type ProfileProps = {
+  profile: ProfileType;
+}
+
+const Profile = ({profile}:ProfileProps) => {
+  
   return (
     <div className="profile">
       <div className="profile-image">
-        <img />
+        <img src={profile.avatar_url} alt={profile.name} />
         <button className="global-button">Ver perfil</button>
       </div>
       <div className="profile-content">
         <div>
           <span className="info-count">
-            Repositórios públicos: 62
+            Repositórios públicos: {profile.public_repos}
           </span>
           <span className="info-count">
-            Seguidores: 127
+            Seguidores: {profile.followers}
           </span>
           <span className="info-count">
-            Seguindo: 416
+            Seguindo: {profile.following}
           </span>
         </div>
         <div className="profile-informations">
           <h2>Informações</h2>
-          <div className="information-item"><strong>Empresa:</strong> @ZupIT</div>
-          <div className="information-item"><strong>Website/Blog:</strong> https://thewashington.dev</div>
-          <div className="information-item"><strong>Localidade:</strong> Uberlândia</div>
-          <div className="information-item"><strong>Membro desde:</strong> 19/10/2013</div>
+          <div className="information-item"><strong>Empresa:</strong> {profile.company}</div>
+          <div className="information-item"><strong>Website/Blog:</strong> {profile.blog}</div>
+          <div className="information-item"><strong>Localidade:</strong> {profile.location}</div>
+          <div className="information-item"><strong>Membro desde:</strong> {formatDate(profile.created_at, 'DD/MM/YYYY')}</div>
         </div>
       </div>      
     </div>
