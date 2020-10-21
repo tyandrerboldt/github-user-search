@@ -2,7 +2,6 @@ import React from 'react'
 import './styles.scss'
 import { Profile as ProfileType } from '../../../../core/types';
 import formatDate from '../../../../core/utils/formatDate';
-
 type ProfileProps = {
   profile: ProfileType;
 }
@@ -13,7 +12,10 @@ const Profile = ({profile}:ProfileProps) => {
     <div className="profile">
       <div className="profile-image">
         <img src={profile.avatar_url} alt={profile.name} />
-        <button className="global-button">Ver perfil</button>
+        <button 
+          className="global-button"
+          onClick={() => window.open(`https://github.com/${profile.login}`, '_blank')}
+        >Ver perfil</button>
       </div>
       <div className="profile-content">
         <div>
